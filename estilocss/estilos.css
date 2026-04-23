@@ -1,0 +1,261 @@
+/* VARIABLES */
+:root {
+  --color-principal: #00ffcc;
+  --fondo: #111;
+  --fondo-secundario: #222;
+  --texto: #ffffff;
+}
+
+/* GENERAL */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  color: var(--texto);
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  background: var(--fondo);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: var(--color-principal);
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: var(--color-principal);
+  color: black;
+}
+
+/* TITULOS */
+h1 {
+  color: var(--color-principal);
+}
+
+h2 {
+  border-left: 5px solid var(--color-principal);
+  padding-left: 10px;
+  margin-top: 40px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 15px;
+}
+
+/* SECCIONES */
+section {
+  margin: 50px 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* CONTENEDORES */
+.box, .planes div, .chatbox {
+  background: var(--fondo-secundario);
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px #000;
+}
+
+/* QUIENES SOMOS */
+.quienes {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box {
+  height: 150px; /* Altura fija para las cajas */
+  width: 150px; /* Establece un ancho fijo para las imágenes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Asegura que la imagen no se desborde */
+}
+
+.box img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
+  object-fit: cover; /* Ajusta la imagen sin deformarla, pero asegurando que cubra el contenedor */
+}
+
+/* BENEFICIOS */
+.beneficios {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.beneficios div {
+  width: 30%;
+}
+
+.beneficios .box {
+  height: 150px; /* Altura fija para las cajas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Asegura que la imagen no se desborde */
+}
+
+.beneficios .box img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
+  object-fit: cover; /* Ajusta la imagen sin deformarla, pero asegurando que cubra el contenedor */
+}
+
+/* VIDEO */
+.video {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PLANES */
+.planes {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  text-align: center;
+}
+
+.planes div {
+  padding: 15px;
+  width: 30%;
+  transition: 0.3s;
+}
+
+.planes div:hover {
+  transform: scale(1.05);
+  background: #00ffcc22;
+}
+
+/* TABLA */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: var(--color-principal);
+  color: black;
+}
+
+/* UBICACION */
+.ubicacion {
+  display: flex;
+  gap: 20px;
+}
+
+.mapa {
+  width: 40%;
+}
+
+.info {
+  width: 60%;
+}
+
+/* HORARIOS */
+.horarios {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* FORMULARIO */
+.chat {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.formulario {
+  width: 50%;
+}
+
+.formulario input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: var(--fondo-secundario);
+  color: white;
+}
+
+.formulario input:focus {
+  outline: none;
+  border: 2px solid var(--color-principal);
+}
+
+.chatbox {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.chatbox img {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Máximo tamaño de la imagen */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+}
+
+/* IMAGENES */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.redes img {
+  width: 60px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+}
+
+/* TEXTO */
+p:hover {
+  color: var(--color-principal);
+}
