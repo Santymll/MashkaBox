@@ -1,63 +1,348 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mashka Box</title>
+<meta charset="UTF-8">
+<title>Mashka Box</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  color: white;
+}
+
+/* CONTENEDOR */
+.container {
+  width: 85%;
+  margin: auto;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+}
+
+nav a {
+  color: #00ffcc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* TITULOS */
+h1 {
+  color: #00ffcc;
+}
+
+h2 {
+  border-left: 5px solid #00ffcc;
+  padding-left: 10px;
+  margin-top: 40px;
+}
+
+/* SECCIONES */
+section {
+  margin: 40px 0;
+}
+
+/* QUIENES SOMOS */
+.quienes {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  background: #222;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* BENEFICIOS */
+.beneficios {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.beneficios div {
+  width: 30%;
+}
+
+/* VIDEO */
+.video {
+  height: 200px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* PLANES */
+.planes {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  text-align: center;
+}
+
+.planes div {
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  width: 30%;
+  transition: 0.3s;
+}
+
+.planes div:hover {
+  transform: scale(1.05);
+  background: #00ffcc22;
+}
+
+/* UBICACION */
+.ubicacion {
+  display: flex;
+  gap: 20px;
+}
+
+.mapa {
+  width: 40%;
+}
+
+.info {
+  width: 60%;
+}
+
+/* HORARIOS */
+.horarios {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* CHAT */
+.chat {
+  display: flex;
+  gap: 20px;
+}
+
+.formulario {
+  width: 50%;
+}
+
+.formulario input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.chatbox {
+  width: 50%;
+  background: #222;
+  border-radius: 10px;
+}
+
+/* REDES */
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.redes img {
+  width: 60px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+}
+
+/* TEXTO */
+p:hover {
+  color: #00ffcc;
+}
+</style>
+
 </head>
 
 <body>
 
+<div class="container">
+
+<header>
 <h1>Mashka Box</h1>
 <p>Entrena fuerte. Vive mejor.</p>
 
+<nav>
+<a href="#">Inicio</a> |
+<a href="#">Características</a> |
+<a href="#">Precios</a> |
+<a href="#">Contacto</a> |
+<a href="#">Ubicación</a>
+</nav>
+</header>
+
+<!-- QUIENES SOMOS -->
+<section class="quienes">
+<div>
 <h2>¿Quienes somos?</h2>
 <p>información</p>
+</div>
 
+<div class="box">Imagen</div>
+</section>
+
+<!-- BENEFICIOS -->
+<section>
 <h2>Caracteristicas y beneficios</h2>
-<p>Servicion de nutrición </p>
-<p>Ejercicios adaptativos </p>
-<p>Apto para todas las edades </p>
 
+<div class="beneficios">
+<div>
+<div class="box"></div>
+<p>Servicion de nutrición</p>
+</div>
+
+<div>
+<div class="box"></div>
+<p>Ejercicios adaptativos</p>
+</div>
+
+<div>
+<div class="box"></div>
+<p>Apto para todas las edades</p>
+</div>
+</div>
+</section>
+
+<!-- VIDEO -->
+<section>
 <h2>Video demostrativo</h2>
+<div class="video">Video aquí</div>
+</section>
 
-
+<!-- PLANES -->
+<section>
 <h2>Planes</h2>
-<p><b>Plan Grupal:</b> $30 c/u - Desde 3 personas.</p>
-<p><b>Plan Estudiantes:</b> $30/mes - Con carnet vigente.</p>
-<p><b>Plan Mensual:</b> $35/mes - Intenta un mes!.</p>
-<p><b>Plan Trimestral:</b> $95/mes - Comprometete 90 dias.</p>
-<p><b>Plan Semestral:</b> $50/mes - Convierte tu vida.</p>
 
+<div class="planes">
+<div>
+<p><b>Plan Grupal:</b> $30 c/u</p>
+</div>
+
+<div>
+<p><b>Plan Estudiantes:</b> $30/mes</p>
+</div>
+
+<div>
+<p><b>Plan Mensual:</b> $35/mes</p>
+</div>
+</div>
+
+<div class="planes" style="margin-top:20px;">
+<div>
+<p><b>Plan Trimestral:</b> $95</p>
+</div>
+
+<div>
+<p><b>Plan Semestral:</b> $50/mes</p>
+</div>
+</div>
+</section>
+
+<!-- UBICACION -->
+<section class="ubicacion">
+<div class="mapa box">Maps</div>
+
+<div class="info">
 <h2>Ubicación</h2>
-<p>[Aquí se mostrará un mapa interactivo]</p>
-<p>Av.Unidad Nacional y Manuelita Sáenz(junto a bundavah)</p>
+<p>Av.Unidad Nacional y Manuelita Sáenz (junto a bundavah)</p>
+</div>
+</section>
 
+<!-- HORARIOS -->
+<section>
 <h2>Horarios por días</h2>
 
+<div class="horarios">
+
+<div>
 <h3>Lunes a Viernes</h3>
+
 <h4>Horarios mañana</h4>
 <p>05:00 AM - CrossFit Básico - Entrenador 1</p>
 <p>06:00 AM - CrossFit Básico - Entrenador 1</p>
 <p>07:00 AM - BOX - Entrenador 1</p>
 <p>08:00 AM - CrossFit Básico - Entrenador 1</p>
+
 <h4>Horarios Tarde/Noche</h4>
 <p>16:00 PM - BOX - Entrenador 2</p>
 <p>17:00 PM - BOX - Entrenador 2</p>
 <p>18:00 PM - BOX - Entrenador 2</p>
 <p>19:00 PM - CrossFit Básico - Entrenador 2</p>
 <p>20:00 PM - BOX - Entrenador 2</p>
-<h3>Sabado</h3>
-<p>09:00 AM - CrossFit Básico - Entrenador 1</p>
+</div>
 
+<div>
+<h3>Sábado</h3>
+<p>09:00 AM - CrossFit Básico - Entrenador 1</p>
+</div>
+
+</div>
+</section>
+
+<!-- CHAT -->
+<section>
 <h2>Chat Directo</h2>
 <p>Contacto inmediato con el administrador.</p>
 <p>0983421877</p>
 
+<div class="chat">
+<div class="formulario">
+<input type="text" placeholder="Nombre">
+<input type="email" placeholder="Correo">
+<input type="text" placeholder="Mensaje">
+</div>
+
+<div class="chatbox"></div>
+</div>
+</section>
+
+<!-- REDES -->
+<section>
 <h2>Redes Sociales</h2>
-<p>mashkabox</p>
-<p>Instagram</p>
-<p>Whatsapp</p>
+
+<div class="redes">
+
+<div>
+<img src="imagenes/facebook.png">
 <p>Facebook</p>
+</div>
+
+<div>
+<img src="imagenes/instagram.webp">
+<p>Instagram</p>
+</div>
+
+<div>
+<img src="imagenes/WhatsApp.png">
+<p>WhatsApp</p>
+</div>
+
+</div>
+</section>
+
+</div>
 
 </body>
 </html>
