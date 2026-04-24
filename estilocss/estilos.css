@@ -1,8 +1,8 @@
 /* VARIABLES */
 :root {
   --color-principal: #F2BE22;
-  --fondo: #111;
-  --fondo-secundario: #222;
+  --fondo: #0a0a0a;
+  --fondo-secundario: rgba(255,255,255,0.04);
   --texto: #ffffff;
 }
 
@@ -10,262 +10,256 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(135deg, #000, #1a1a1a);
+  background: linear-gradient(135deg, #000, #111);
   color: var(--texto);
 }
 
 .container {
   width: 85%;
   margin: auto;
-  background: var(--fondo);
-  padding: 30px;
-  border-radius: 10px;
+  padding: 40px 20px;
 }
 
-/* HEADER */
+/* ========================= */
+/* HEADER (CENTRADO 🔥) */
+/* ========================= */
 header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
   margin-top: 15px;
 }
 
 nav a {
   color: var(--color-principal);
   text-decoration: none;
-  margin: 0 10px;
-  padding: 8px 15px;
-  border-radius: 5px;
+  padding: 8px 18px;
+  border-radius: 30px;
   transition: 0.3s;
 }
 
 nav a:hover {
   background: var(--color-principal);
   color: black;
+  box-shadow: 0 0 15px var(--color-principal);
 }
 
 /* TITULOS */
 h1 {
   color: var(--color-principal);
+  font-size: 2.8em;
 }
 
 h2 {
   border-left: 5px solid var(--color-principal);
-  padding-left: 10px;
-  margin-top: 40px;
-}
-
-h1, h2, h3 {
-  margin-bottom: 15px;
-}
-
-/* SECCIONES */
-section {
-  margin: 60px 0;
-}
-
-p {
-  line-height: 1.6;
+  padding-left: 12px;
+  margin-top: 60px;
 }
 
 /* CONTENEDORES */
 .box, .planes div, .chatbox {
   background: var(--fondo-secundario);
-  border-radius: 10px;
-  border: 1px solid #333;
-  box-shadow: 0 0 10px #000;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
 }
 
-/* ========================= */
-/* QUIENES SOMOS */
-/* ========================= */
-
-.quienes {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.quienes div:first-child {
-  width: 60%;
-}
-
-.quienes .box {
-  width: 40%;
-  height: 250px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.quienes .box img {
+/* IMAGENES */
+img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 15px;
+}
+
+/* EFECTO */
+.box img, .chatbox img {
+  transition: transform 0.5s ease;
+}
+
+.box:hover img, .chatbox:hover img {
+  transform: scale(1.1);
+}
+
+/* ========================= */
+/* QUIENES (ARREGLADO 🔥) */
+/* ========================= */
+.quienes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.quienes div:first-child {
+  width: 500px;
+}
+
+.quienes .box {
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
 }
 
 /* ========================= */
 /* BENEFICIOS */
 /* ========================= */
-
 .beneficios {
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .beneficios div {
-  width: 30%;
+  width: 300px;
+  text-align: center;
 }
 
 .beneficios .box {
-  height: 180px;
-  margin-bottom: 10px;
+  height: 200px;
   overflow: hidden;
+  margin-bottom: 15px;
 }
 
-.beneficios .box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* VIDEO */
-.video {
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/* ========================= */
 /* PLANES */
+/* ========================= */
 .planes {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  text-align: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .planes div {
-  padding: 15px;
-  width: 30%;
-  transition: 0.3s;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
 }
 
 .planes div:hover {
-  transform: scale(1.05);
-  background: #00ffcc22;
+  transform: translateY(-10px) scale(1.03);
 }
 
+/* ========================= */
 /* TABLA */
+/* ========================= */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th, td {
-  border: 1px solid #333;
-  padding: 10px;
-  text-align: center;
+  margin-top: 40px;
 }
 
 th {
-  background: #52a5d9;
+  background: var(--color-principal);
   color: black;
 }
 
+th, td {
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ========================= */
 /* UBICACION */
+/* ========================= */
 .ubicacion {
   display: flex;
-  gap: 20px;
-  align-items: center;
+  gap: 30px;
+  margin-top: 80px; /* separa del contenido anterior */
+  flex-wrap: wrap;
 }
 
-.mapa {
-  width: 40%;
-}
-
-.info {
-  width: 60%;
-}
-
-/* HORARIOS */
-.horarios {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
+.mapa, .info {
+  width: 48%;
 }
 
 /* ========================= */
-/* FORMULARIO (MEJORADO) */
+/* FORMULARIO 🔥 */
 /* ========================= */
-
 .chat {
   display: flex;
-  gap: 20px;
-  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .formulario {
-  width: 50%;
+  width: 380px;
 }
 
 .formulario input {
   width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background: var(--fondo-secundario);
+  margin-bottom: 15px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
   color: white;
+  transition: 0.3s;
 }
 
 .formulario input:focus {
   outline: none;
-  border: 2px solid var(--color-principal);
+  border: 1px solid var(--color-principal);
+  box-shadow: 0 0 10px var(--color-principal);
+}
+
+.formulario button {
+  width: 100%;
+  padding: 14px;
+  background: var(--color-principal);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--color-principal);
 }
 
 .chatbox {
-  width: 50%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 380px;
+  height: 250px;
   overflow: hidden;
 }
 
-.chatbox img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* IMAGENES GENERALES */
-img {
-  max-width: 100%;
-  display: block;
-}
-
+/* ========================= */
 /* REDES */
+/* ========================= */
 .redes {
   display: flex;
   justify-content: center;
   gap: 40px;
-  text-align: center;
+  margin-top: 40px;
 }
 
 .redes img {
   width: 60px;
+  height: 60px;
   border-radius: 50%;
   transition: 0.3s;
 }
 
 .redes img:hover {
   transform: scale(1.2);
+  box-shadow: 0 0 15px var(--color-principal);
 }
 
 /* TEXTO */
