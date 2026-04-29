@@ -44,9 +44,9 @@
 
 <div>
 <div class="box">
-<img src="imagenes/nutricion.jpg" alt="nutrición">
+<img src="imagenes/g1.jpg" alt="nutrición">
 </div>
-<p>Servicio de nutrición</p>
+<p>Variedad de Equipos</p>
 </div>
 
 <div>
@@ -95,21 +95,6 @@ allowfullscreen></iframe>
 <div><p><b>Semestral:</b> $50/mes</p></div>
 </div>
 
-<table>
-<tr>
-<th>Plan</th>
-<th>Precio</th>
-</tr>
-<tr>
-<td>Mensual</td>
-<td>$35</td>
-</tr>
-<tr>
-<td>Trimestral</td>
-<td>$95</td>
-</tr>
-</table>
-
 </section>
 
 <!-- UBICACION -->
@@ -139,17 +124,21 @@ loading="lazy">
 <h2>Horarios</h2>
 
 <div class="horarios">
-
-<div>
+<table>
 <h3>Lunes a Viernes</h3>
-<p>05:00 - 08:00</p>
-<p>16:00 - 20:00</p>
-</div>
-
-<div>
-<h3>Sábado</h3>
-<p>09:00</p>
-</div>
+<tr>
+<th>Mañana</th>
+<th>Tarde</th>
+</tr>
+<tr>
+<td>05:00 - 08:00</td>
+<td>16:00 - 20:00</td>
+</tr>
+<tr>
+<td>Sábado</td>
+<td>09:00</td>
+</tr>
+</table>
 
 </div>
 
@@ -162,10 +151,12 @@ loading="lazy">
 <div class="chat">
 
 <div class="formulario">
-<input type="text" placeholder="Nombre">
-<input type="email" placeholder="Correo">
-<input type="text" placeholder="Mensaje">
-<button>Enviar mensaje</button>
+<form id="contactForm" class="formulario">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="email" id="correo" placeholder="Correo" required>
+    <textarea id="mensaje" placeholder="Tu mensaje aquí..." rows="4"></textarea>          
+    <button type="submit" id="btnEnviar">Enviar mensaje</button>
+</form>
 </div>
 
 <div class="chatbox">
