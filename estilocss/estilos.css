@@ -156,8 +156,8 @@ img {
 
 .media-row {
   display: grid;
-  grid-template-columns: minmax(320px, 560px) 1fr 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 20px;
   align-items: stretch;
   margin-top: 40px;
 }
@@ -183,8 +183,9 @@ img {
 
 .video-frame {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  max-height: 260px;
+  aspect-ratio: 9 / 16;
+  height: 100%;
+  max-height: 420px;
   overflow: hidden;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.02);
